@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Michael Milewski
+	email = saramic@gmail.com
+[pull]
+	rebase = true
+[core]
+	editor = vi
+	# editor = code --wait
+	pager = less -F -X
+[init]
+	defaultBranch = main
