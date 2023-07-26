@@ -15,3 +15,24 @@ brew "fd"                         # Simple, fast and user-friendly alternative t
                                   # https://github.com/sharkdp/fd
 brew "emacs"
 brew "tldr"
+
+brew "ag"                 # sliver searcher, a faster grep
+brew "jq"                 # UNIX tool for parsing and querying JSON
+brew "wget"               # UNIX tool for fetching things from the nets
+brew "tmux"               # terminal multiplexer for automating running many
+                          # processes across many windows
+
+brew "libpq"              # needed for pg gem install pg -v '1.2.3' postgres
+tap "heroku/brew"
+brew "heroku"             # deploy and manage heroku platform
+
+brew "exercism"           # code learning platform
+brew "ffmpeg"             # video processing like making animated gifs
+brew "mpg123"             # mp3 player
+cask "visual-studio-code" # preferred code editor
+brew "imagemagick"        # programatic image manipulation
+cask "spectacle"          # screen realestate management
+brew "hugo"               # blogging software
+cask "keycastr"           # show characters being typed
+cask "keybase"            # secure messaging
+cask "pritunl"            # OpenVPN client
