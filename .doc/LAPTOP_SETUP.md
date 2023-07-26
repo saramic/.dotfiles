@@ -195,10 +195,14 @@ something similar to
     > followed by a restart of VSCode
     
 - **Neovim**
-    > - make it your vi
-    > ```
-    > ln -s /opt/homebrew/bin/nvim /opt/homebrew/bin/vi
-    > ```
+    - make it your vi
+    ```
+    ln -s /opt/homebrew/bin/nvim /opt/homebrew/bin/vi
+    ```
+    - do a packer sync
+    ```
+    :PackerSync
+    ```
     > - install a plugin manager
     > ```
     > via https://github.com/junegunn/vim-plug

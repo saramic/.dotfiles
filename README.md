@@ -35,6 +35,64 @@ make dev-env         # setup the default developer environment
 make update-dev-env  # update brew and setup the default developer environment
 ```
 
+## Neovim
+
+as per
+
+[
+  ![0 to LSP : Neovim RC From Scratch - ThePrimeagen
+  ](http://img.youtube.com/vi/w7i4amO_zaE/0.jpg)
+](http://youtu.be/w7i4amO_zaE)
+
+**0 to LSP : Neovim RC From Scratch - ThePrimeagen**
+
+and https://github.com/ThePrimeagen/init.lua
+
+```
+:h rtp # runtimepath for nvim
+%      # create a new file
+d      # create a directory
+:so    # source current file
+
+# ' ' space set as leader
+# SPACE P V to open Ex file explorer
+```
+
+from https://github.com/wbthomason/packer.nvim
+
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
+add section to load in `packer.lua` and run
+
+```
+:PackerSync
+```
+
+```
+https://github.com/nvim-telescope/telescope.nvim
+# paste packer install
+# Visual select and '=' to align
+# SPACE pf - files
+# SPACE ps - search
+# CTRL p - in git
+```
+
+theme https://github.com/rose-pine/neovim
+
+```
+:lua ColorMyPencils() # to re-call the color method
+```
+
+also:
+- https://github.com/nvim-treesitter/nvim-treesitter
+- https://github.com/ThePrimeagen/harpoon
+- https://github.com/mbbill/undotree
+- https://github.com/tpope/vim-fugitive
+- https://github.com/VonHeikemen/lsp-zero.nvim
+
 ## Doom Emacs
 
 as per https://github.com/doomemacs/doomemacs and
