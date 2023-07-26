@@ -14,3 +14,4 @@ brew "coreutils"                  # GNU File, Shell, and Text utilities
 brew "fd"                         # Simple, fast and user-friendly alternative to find
                                   # https://github.com/sharkdp/fd
 brew "emacs"
+brew "tldr"

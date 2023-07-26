@@ -9,6 +9,9 @@ alias config='/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
 echo ".dotfiles" >> .gitignore
 git clone --bare <git-repo-url> $HOME/.dotfiles
 config checkout
+
+# probably want to
+config config --local status.showUntrackedFiles no
 ```
 
 if there are errors due to existing files
