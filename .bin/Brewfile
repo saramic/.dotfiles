@@ -2,3 +2,6 @@
 
 brew "git"                        # Distributed revision control system
                                   # https://git-scm.com
+brew "asdf"                       # Extendable version manager with support for
+				  # Ruby, Node.js, Erlang & more
+				  # https://asdf-vm.com/

@@ -1,0 +1,35 @@
+#!/usr/bin/env zsh
+
+set -e
+
+install_and_update_asdf_plugin() {
+  echo "installing $1 asdf plugin"
+  asdf plugin-add "$1" || echo "asdf $1 plugin is already installed"
+  asdf plugin-update "$1"
+}
+
+if [[ "$(uname)" == "Darwin" ]]; then
+  if [[ $* == *--update* ]]
+  then
+    echo "running brew upgrade"
+    brew upgrade
+  fi
+  brew bundle --file .bin/Brewfile
+  brew cleanup
+else
+  echo "Unsupported system: $(uname)"
+  exit 1
+fi
+
+# asdf managed from brew
+# from https://asdf-vm.com/#/core-manage-asdf
+# git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1 || echo "asdf already installed"
+# source ~/.asdf/asdf.sh
+# asdf update
+
+for plugin in nodejs postgres python ruby rust yarn redis
+do
+  install_and_update_asdf_plugin $plugin
+done
+asdf install
+

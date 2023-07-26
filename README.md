@@ -23,8 +23,11 @@ mkdir -p .config-backup && \
 
 What needs to be done to re-install ohMyZsh?
 
-# Brew
+# make
 
 ```
-brew bundle --file .doc/Brewfile
+make
+make check-tools     # check required tools
+make dev-env         # setup the default developer environment
+make update-dev-env  # update brew and setup the default developer environment
 ```

@@ -106,3 +106,6 @@ alias config='/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
 
 # use vi command line bindings
 set -o vi
+
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
