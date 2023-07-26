@@ -1,5 +1,24 @@
 # LAPTOP SETUP
 
+1. start the machine
+    1. choose all sain settings for your locale
+    1. log into **iCould account** even for work laptop
+	> this will allow you to save documents and notes to the
+	> cloud which may be helpful for transferring to another
+	> machine, a backup, accessing from a phone or the web,
+	> finding your device, etc.
+
+1. **System Update**
+    1. once fully booted
+    1. run a system update `System Preferences -> Software Updates`
+       > every new machine is likely to be behind on software
+       > updates
+
+1. install command line tools
+   ```
+   xcode-select --install
+   ```
+
 1. **Git**
     1. use the default git that comes with mac
     1. create or bring across your ssh key and make sure it's in gitlab
