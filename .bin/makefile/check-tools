@@ -22,7 +22,7 @@ check_expected_version nodejs "$(node -v)"
 check_expected_version ruby "$(ruby -v)"
 check_expected_version python "$(python -V)"
 check_expected_version postgres "$(psql --version)"
-# check_expected_version rust "$(rustc --version)"
+check_expected_version rust "$(rustc --version)"
 check_expected_version yarn "$(yarn --version)"
 check_expected_version redis "$(redis-cli --version)"
 
