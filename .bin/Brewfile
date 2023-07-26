@@ -3,5 +3,14 @@
 brew "git"                        # Distributed revision control system
                                   # https://git-scm.com
 brew "asdf"                       # Extendable version manager with support for
-				  # Ruby, Node.js, Erlang & more
-				  # https://asdf-vm.com/
+                                  # Ruby, Node.js, Erlang & more
+                                  # https://asdf-vm.com/
+
+# emacs
+brew "ripgrep"                    # Search tool like grep and The Silver Searcher
+                                  # https://github.com/BurntSushi/ripgrep
+brew "coreutils"                  # GNU File, Shell, and Text utilities
+                                  # https://www.gnu.org/software/coreutils
+brew "fd"                         # Simple, fast and user-friendly alternative to find
+                                  # https://github.com/sharkdp/fd
+brew "emacs"

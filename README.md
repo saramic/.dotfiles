@@ -31,3 +31,26 @@ make check-tools     # check required tools
 make dev-env         # setup the default developer environment
 make update-dev-env  # update brew and setup the default developer environment
 ```
+
+# Doom Emacs
+
+as per https://github.com/doomemacs/doomemacs and
+[
+  ![Doom Emacs On Day One (Learn These Things FIRST!) - DistroTube
+  ](http://img.youtube.com/vi/37H7bD-G7nE/0.jpg)
+](http://youtu.be/37H7bD-G7nE)
+
+```
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+~/.config/emacs/bin/doom install
+```
+
+```
+# assuming the daemon is running
+/opt/homebrew/bin/emacs --daemon
+# TODO: start this up with launchd?
+
+# aliased emacsclient as just 'emacs'
+emacs
+```
+

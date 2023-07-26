@@ -112,3 +112,7 @@ export EDITOR=vi
 
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# emacs
+export PATH="$HOME/.config/emacs/bin:$PATH"
+alias emacs="emacsclient -c -a 'emacs'"
