@@ -8,5 +8,6 @@
 	editor = vi
 	# editor = code --wait
 	pager = less -F -X
+	excludesfile = /Users/michael/.gitignore_global
 [init]
 	defaultBranch = main

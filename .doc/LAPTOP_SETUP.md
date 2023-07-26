@@ -37,6 +37,7 @@
     # git config --global core.editor "code --wait"
     git config --global --replace-all core.pager "less -F -X"
     git config --global init.defaultBranch main
+    git config --global core.excludesfile ~/.gitignore_global
     ```
     1. review your `~/.gitconfig` file using
     ```

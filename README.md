@@ -22,11 +22,11 @@ mkdir -p .config-backup && \
   xargs -I{} mv {} .config-backup/{}
 ```
 
-# OhMyZsh
+## OhMyZsh
 
 What needs to be done to re-install ohMyZsh?
 
-# make
+## make
 
 ```
 make
@@ -35,13 +35,15 @@ make dev-env         # setup the default developer environment
 make update-dev-env  # update brew and setup the default developer environment
 ```
 
-# Doom Emacs
+## Doom Emacs
 
 as per https://github.com/doomemacs/doomemacs and
 [
   ![Doom Emacs On Day One (Learn These Things FIRST!) - DistroTube
   ](http://img.youtube.com/vi/37H7bD-G7nE/0.jpg)
 ](http://youtu.be/37H7bD-G7nE)
+
+**Doom Emacs On Day One (Learn These Things FIRST!) - DistroTube**
 
 ```
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
