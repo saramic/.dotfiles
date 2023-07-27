@@ -41,3 +41,5 @@ brew "hugo"               # blogging software
 cask "keycastr"           # show characters being typed
 cask "keybase"            # secure messaging
 cask "pritunl"            # OpenVPN client
+
+cask "tuple"
