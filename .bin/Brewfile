@@ -46,3 +46,4 @@ cask "pritunl"            # OpenVPN client
 cask "tuple"
 
 brew "gnupg"
+cask "iterm2"

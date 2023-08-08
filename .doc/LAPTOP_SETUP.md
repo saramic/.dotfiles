@@ -87,6 +87,20 @@
       ```
       asdf install
       ```
+   1. **NVIM**
+      install packer
+      ```
+      git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+        ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+      ```
+      inside a nvim session
+      ```
+      :PackerSync
+      ```
+      finally make it your vim
+      ```
+      ln -s /opt/homebrew/bin/nvim /opt/homebrew/bin/vi
+      ```
 
 1. **Configure essentials**
     1. **Terminal** worth setting up even if you plan to use iTerm most of the time
