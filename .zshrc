@@ -116,3 +116,6 @@ export EDITOR=vi
 # emacs
 export PATH="$HOME/.config/emacs/bin:$PATH"
 alias emacs="emacsclient -c -a 'emacs'"
+
+# rust
+source "$HOME/.asdf/installs/rust/1.71.1/env"

@@ -44,3 +44,5 @@ cask "keybase"            # secure messaging
 cask "pritunl"            # OpenVPN client
 
 cask "tuple"
+
+brew "gnupg"

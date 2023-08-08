@@ -4,4 +4,4 @@ postgres 12.11
 nodejs 20.2.0
 yarn 1.22.19
 python 3.10.4
-rust 1.71.0
+rust 1.71.1
