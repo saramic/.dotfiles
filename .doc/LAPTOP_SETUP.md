@@ -3,10 +3,10 @@
 1. start the machine
     1. choose all sain settings for your locale
     1. log into **iCould account** even for work laptop
-	> this will allow you to save documents and notes to the
-	> cloud which may be helpful for transferring to another
-	> machine, a backup, accessing from a phone or the web,
-	> finding your device, etc.
+       > this will allow you to save documents and notes to the
+       > cloud which may be helpful for transferring to another
+       > machine, a backup, accessing from a phone or the web,
+       > finding your device, etc.
 
 1. **System Update**
     1. once fully booted
@@ -19,29 +19,74 @@
    xcode-select --install
    ```
 
+1. **using existing .dotfiles**
+   ```
+   git clone --bare git@github.com:saramic/.dotfiles.git $HOME/.dotfiles
+   # based on which git
+   alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+   config status
+   config config --local status.showUntrackedFiles no
+   ```
+
 1. **Git**
-    1. use the default git that comes with mac
-    1. create or bring across your ssh key and make sure it's in gitlab
-       [Preferences -> User Settings -> SSH
-       Keys](https://gitlab.com/-/profile/keys) as per instructions in
-       https://docs.gitlab.com/ee/ssh/#rsa-ssh-keys
-     ```
-     ssh-keygen -t rsa -b 2048 -C "my UNIQUE NAME key"
-     ```
-    1. setup sane git defaults
-    ```
-    git config --global pull.rebase true
-    git config --global user.name "Michael Milewski"
-    git config --global user.email saramic@gmail.com
-    git config --global core.editor vi
-    # git config --global core.editor "code --wait"
-    git config --global --replace-all core.pager "less -F -X"
-    git config --global init.defaultBranch main
-    git config --global core.excludesfile ~/.gitignore_global
-    ```
-    1. review your `~/.gitconfig` file using
-    ```
-     git config --global --edit
+    1. review your `~/.gitconfig` file using, below, it should be already setup
+       ```
+       git config --global --edit
+       ```
+    1. or use the following to set it up
+      1. use the default git that comes with mac
+      1. create or bring across your ssh key and make sure it's in gitlab
+         [Preferences -> User Settings -> SSH
+         Keys](https://gitlab.com/-/profile/keys) as per instructions in
+         https://docs.gitlab.com/ee/ssh/#rsa-ssh-keys
+         ```
+         # NEW
+         # based on
+         #  https://www.keystash.io/guides/how-to-generate-the-best-ssh-keys.html
+         ssh-keygen -o -a 100 -t ed25519
+         # OLD
+         ssh-keygen -t rsa -b 2048 -C "my UNIQUE NAME key"
+         ```
+      1. setup sane git defaults
+         ```
+         git config --global pull.rebase true
+         git config --global user.name "Michael Milewski"
+         git config --global user.email saramic@gmail.com
+         git config --global core.editor vi
+         # git config --global core.editor "code --wait"
+         git config --global --replace-all core.pager "less -F -X"
+         git config --global init.defaultBranch main
+         git config --global core.excludesfile ~/.gitignore_global
+         ```
+      1. review your `~/.gitconfig` file using
+         ```
+         git config --global --edit
+         ```
+
+1. **Mandatory Setup**
+   these are referenced by the dot files above
+   1. **Brew** _(also see below)_
+      ```
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      ```
+   1. **OhMyZSH** _(also see below)_
+      ```
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+      # confirm changes and ignore the new .zshrc file
+      vimdiff .zshrc .zshrc.pre-oh-my-zsh
+      mv .zshrc.pre-oh-my-zsh .zshrc
+      ```
+   1. **First time make**
+      ```
+      make update-dev-env
+      # will now have brew git so can update
+      alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+      ```
+   1. **ASDF install**
+      ```
+      asdf install
+      ```
 
 1. **Configure essentials**
     1. **Terminal** worth setting up even if you plan to use iTerm most of the time
@@ -85,16 +130,17 @@
 
 1. **Brew**
     1. use homebrew to manage most dependencies https://brew.sh
-    1. following the instructions from above site, in terminal run
-something similar to
-     ```
+    1. following the instructions from above site, in terminal run something
+       similar to
+       ```
        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-     ```
+       ```
     1. don't forget to do the final step of the previous command to add it to your profile
      ```
      echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
      eval "$(/opt/homebrew/bin/brew shellenv)"
      ```
+    1.
 
 1. **install ASDF** runtime version manager (JS, Ruby, Python, Postgres, etc)
     1. should have been done using `make update-dev-env`
@@ -141,9 +187,10 @@ something similar to
     1. System Prefrences -> Keyboard -> Delay until repeat **short**
     1. System Prefrences -> Trackpad -> **tap to click**
     1. System Prefrences -> Mouse -> **Secondary click**
-    1. System Prefrences -> Bluetooth -> **Show Bluetooth in menu bar**
+    1. System Prefrences -> Control Centre -> Bluewtooth -> **Show in Menu Bar**
     1. Power moves (vi users)
-        1. System Prefrences -> Keyboard -> Modifier Keys -> Caps Lock Key -> Escape
+        1. System Prefrences -> Keyboard -> Keyboard Shortcuts...
+           -> Modifier Keys -> Caps Lock Key -> Escape
 
 1. **Vi**
     > 1. let's face it at some stage you are going to open vi (VIsual editor) so
@@ -193,7 +240,7 @@ something similar to
     > defaults delete -g ApplePressAndHoldEnabled                                      # If necessary, reset global default
     > ```
     > followed by a restart of VSCode
-    
+
 - **Neovim**
     - make it your vi
     ```
