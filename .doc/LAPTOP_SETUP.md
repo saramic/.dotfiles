@@ -101,6 +101,16 @@
       ```
       ln -s /opt/homebrew/bin/nvim /opt/homebrew/bin/vi
       ```
+   1. **emacs**
+      ```
+      git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+      ~/.config/emacs/bin/doom install
+      /opt/homebrew/bin/emacs --daemon
+      emacs
+      ```
+      also in iTerm2 Preferences -> Profiles -> Keys -> General
+
+      set the Left Option Key: -> Esc+
 
 1. **Configure essentials**
     1. **Terminal** worth setting up even if you plan to use iTerm most of the time
