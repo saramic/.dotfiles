@@ -45,5 +45,9 @@ cask "pritunl"            # OpenVPN client
 
 cask "tuple"
 
-brew "gnupg"
-cask "iterm2"
+brew "gnupg"             # GNU Pretty Good Privacy (PGP) package
+                         #https://gnupg.org/
+
+cask "iterm2"            # https://www.iterm2.com/
+cask "spotify"           # https://www.spotify.com/
+cask "whatsapp"          # https://www.whatsapp.com/
