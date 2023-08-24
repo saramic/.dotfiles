@@ -11,3 +11,5 @@
 	excludesfile = ~/.gitignore_global
 [init]
 	defaultBranch = main
+[commit]
+	template = /Users/michael.milewski/.gitmessage.txt

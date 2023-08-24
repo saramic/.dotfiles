@@ -57,7 +57,21 @@
          git config --global --replace-all core.pager "less -F -X"
          git config --global init.defaultBranch main
          git config --global core.excludesfile ~/.gitignore_global
+         git config --global commit.template ~/.gitmessage.txt
          ```
+      1. setup `~/.gitmessage.txt` file with current pairs (NOTE: this can also
+         be done per directory tree or repository)
+         ```sh
+         cat <<EOF > ~/.gitmessage.txt
+
+
+         # Co-authored-by: Pair Name <pair-email-id>
+         #
+         # Co-authored-by: Sarah Alexander <sjalex78@gmail.com>
+         # Co-authored-by: Selena Small <selenawiththetattoo@gmail.com>
+         EOF
+         ```
+
       1. review your `~/.gitconfig` file using
          ```
          git config --global --edit
@@ -293,6 +307,3 @@
 - **Ruby**
     TODO: default `.rspec` with `--format documentation`
     TODO: env var to use readline in irb by default
-
-- **Git**
-    TODO: up above add `.gitmessage` for a default git message
