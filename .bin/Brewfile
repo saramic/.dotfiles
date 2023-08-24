@@ -1,53 +1,71 @@
 # mange dependencies with brew https://brew.sh/
 
-brew "git"                        # Distributed revision control system
-                                  # https://git-scm.com
-brew "asdf"                       # Extendable version manager with support for
-                                  # Ruby, Node.js, Erlang & more
-                                  # https://asdf-vm.com/
+brew "git"                  # Distributed revision control system
+                            # https://git-scm.com
+brew "asdf"                 # Extendable version manager with support for
+                            # Ruby, Node.js, Erlang & more
+                            # https://asdf-vm.com/
 
 # emacs
-brew "ripgrep"                    # Search tool like grep and The Silver Searcher
-                                  # https://github.com/BurntSushi/ripgrep
-brew "coreutils"                  # GNU File, Shell, and Text utilities
-                                  # https://www.gnu.org/software/coreutils
-brew "fd"                         # Simple, fast and user-friendly alternative to find
-                                  # https://github.com/sharkdp/fd
-brew "emacs"
-brew "tldr"
-brew "ispell"
+brew "ripgrep"              # Search tool like grep and The Silver Searcher
+                            # https://github.com/BurntSushi/ripgrep
+brew "coreutils"            # GNU File, Shell, and Text utilities
+                            # https://www.gnu.org/software/coreutils
+brew "fd"                   # Simple, fast and user-friendly alternative to find
+                            # https://github.com/sharkdp/fd
+brew "emacs"                # GNU Emacs text editor
+                            # https://www.gnu.org/software/emacs/
+brew "tldr"                 # Simplified and community-driven man pages
+                            # https://tldr.sh/
+brew "ispell"               # International Ispell
+                            # https://www.cs.hmc.edu/~geoff/ispell.html
+
+# SpaceMacs
+# cask "emacs"
+# tap "homebrew/cask-fonts"
+# cask "font-source-code-pro"
 
 # neovim
-brew "nvim"                       # Ambitious Vim-fork focused on
-                                  # extensibility and agility
-                                  # https://neovim.io/
+brew "nvim"                 # Ambitious Vim-fork focused on
+                            # extensibility and agility
+                            # https://neovim.io/
 
-brew "ag"                 # sliver searcher, a faster grep
-brew "jq"                 # UNIX tool for parsing and querying JSON
-brew "wget"               # UNIX tool for fetching things from the nets
-brew "tmux"               # terminal multiplexer for automating running many
-                          # processes across many windows
+brew "ag"                   # sliver searcher, a faster grep
+brew "jq"                   # UNIX tool for parsing and querying JSON
+brew "wget"                 # UNIX tool for fetching things from the nets
+brew "tmux"                 # terminal multiplexer for automating running many
+                            # processes across many windows
 
-brew "libpq"              # needed for pg gem install pg -v '1.2.3' postgres
+brew "libpq"                # needed for pg gem install pg -v '1.2.3' postgres
 tap "heroku/brew"
-brew "heroku"             # deploy and manage heroku platform
+brew "heroku"               # deploy and manage heroku platform
 
-brew "exercism"           # code learning platform
-brew "ffmpeg"             # video processing like making animated gifs
-brew "mpg123"             # mp3 player
-cask "visual-studio-code" # preferred code editor
-brew "imagemagick"        # programatic image manipulation
-cask "spectacle"          # screen realestate management
-brew "hugo"               # blogging software
-cask "keycastr"           # show characters being typed
-cask "keybase"            # secure messaging
-cask "pritunl"            # OpenVPN client
+brew "exercism"             # code learning platform
+brew "ffmpeg"               # video processing like making animated gifs
+brew "mpg123"               # mp3 player
+cask "visual-studio-code"   # preferred code editor
+brew "imagemagick"          # programatic image manipulation
+cask "spectacle"            # screen realestate management
+brew "hugo"                 # blogging software
+cask "keycastr"             # show characters being typed
+cask "keybase"              # secure messaging
+cask "pritunl"              # OpenVPN client
 
-cask "tuple"
+cask "tuple"                # https://tuple.app/
 
-brew "gnupg"             # GNU Pretty Good Privacy (PGP) package
-                         #https://gnupg.org/
+brew "gnupg"                # GNU Pretty Good Privacy (PGP) package
+                            # https://gnupg.org/
 
-cask "iterm2"            # https://www.iterm2.com/
-cask "spotify"           # https://www.spotify.com/
-cask "whatsapp"          # https://www.whatsapp.com/
+cask "iterm2"               # https://www.iterm2.com/
+cask "spotify"              # https://www.spotify.com/
+cask "whatsapp"             # https://www.whatsapp.com/
+cask "gimp"
+
+brew "kubectl"              # Kubernetes command-line interface
+                            # https://kubernetes.io/
+tap "derailed/k9s"
+brew "derailed/k9s/k9s"     # Kubernetes CLI To Manage Your Clusters In Style!
+                            # https://k9scli.io/
+
+cask "webtorrent"           # https://webtorrent.io/desktop/
+cask "vlc"                  # https://www.videolan.org/vlc/
