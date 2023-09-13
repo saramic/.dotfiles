@@ -77,6 +77,13 @@
          git config --global --edit
          ```
 
+      1. slow directory listing?
+         https://stackoverflow.com/a/25864063
+         ```
+         git config --add oh-my-zsh.hide-status 1
+         git config --add oh-my-zsh.hide-dirty 1
+         ```
+
 1. **Mandatory Setup**
    these are referenced by the dot files above
    1. **Brew** _(also see below)_
