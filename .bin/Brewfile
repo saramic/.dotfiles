@@ -69,3 +69,8 @@ brew "derailed/k9s/k9s"     # Kubernetes CLI To Manage Your Clusters In Style!
 
 cask "webtorrent"           # https://webtorrent.io/desktop/
 cask "vlc"                  # https://www.videolan.org/vlc/
+
+cask "orbstack"             # https://orbstack.dev/ Replacement for Docker
+                            # Desktop
+cask "arduino-ide"          # arduino-ide: 2.2.1
+                            # https://www.arduino.cc/en/software
