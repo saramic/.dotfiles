@@ -115,6 +115,8 @@ export EDITOR=vi
 
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+# java via asdf
+. ~/.asdf/plugins/java/set-java-home.zsh
 
 # emacs
 export PATH="$HOME/.config/emacs/bin:$PATH"
