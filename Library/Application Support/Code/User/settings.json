@@ -1,0 +1,15 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.tabSize": 2,
+    "workbench.colorTheme": "Sepia",
+    "workbench.startupEditor": "none",
+    "git.openRepositoryInParentFolders": "always",
+    "files.trimTrailingWhitespace": true,
+    "editor.wordWrap": "off",
+    "security.workspace.trust.untrustedFiles": "open",
+    "gitlens.advanced.messages": {
+        "suppressIntegrationRequestTimedOutWarning": true
+    },
+    "window.zoomLevel": 1,
+    "extensions.ignoreRecommendations": true
+}
