@@ -314,3 +314,35 @@
 - **Ruby**
     TODO: default `.rspec` with `--format documentation`
     TODO: env var to use readline in irb by default
+
+## TODO
+
+- [ ] seem to still need to `asdf plugin add ...` ? make this part of a script
+- [ ] **Light Dark** switch over?
+    ```sh
+    mkdir -p ~/Projects/public
+    cd ~/Projects/public
+    git clone https://github.com/sobolevn/sobole-zsh-theme.git
+    ln -s $PWD/sobole-zsh-theme/sobole.zsh-theme \
+        ~/.oh-my-zsh/custom/themes/sobole.zsh-theme
+
+    vi .zshrc
+        ZSH_THEME="sobole"
+        SOBOLE_THEME_MODE="light"
+
+    source .zshrc
+    ```
+
+    what about VSCode?
+
+    ```sh
+    cat Library/Application\ Support/Code/User/settings.json | \
+      jq  '."workbench.colorTheme"'
+
+        "Sepia"
+    ```
+
+    but still need to install it?
+
+    and how to switch?
+
