@@ -74,3 +74,7 @@ cask "orbstack"             # https://orbstack.dev/ Replacement for Docker
                             # Desktop
 cask "arduino-ide"          # arduino-ide: 2.2.1
                             # https://www.arduino.cc/en/software
+cask "brave-browser"        # brave-browser: 1.60.118.0 (auto_updates)
+                            # https://brave.com/
+cask "the-unarchiver"       # the-unarchiver: 4.3.6,143,1697809946
+                            # (auto_updates) https://theunarchiver.com/

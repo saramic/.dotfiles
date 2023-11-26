@@ -132,3 +132,7 @@ alias emacs="emacsclient -c -a 'emacs'"
 
 # rust
 source "$HOME/.asdf/installs/rust/1.71.1/env"
+
+# rubymine
+export PATH="$PATH:/Applications/RubyMine.app/Contents/MacOS"
+alias mine="/Applications/RubyMine.app/Contents/MacOS/rubymine"
