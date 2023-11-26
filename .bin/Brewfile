@@ -37,6 +37,13 @@ brew "tmux"                 # terminal multiplexer for automating running many
                             # processes across many windows
 
 brew "libpq"                # needed for pg gem install pg -v '1.2.3' postgres
+# brew "postgresql@14"        # Object-relational database system
+#                             # https://www.postgresql.org/
+brew "postgresql@15"        # Object-relational database system
+                            # https://www.postgresql.org/
+brew "postgis"              # Adds support for geographic objects to PostgreSQL
+                            # https://postgis.net/
+                            # postgis: stable 3.3.4 (bottled), HEAD
 tap "heroku/brew"
 brew "heroku"               # deploy and manage heroku platform
 
