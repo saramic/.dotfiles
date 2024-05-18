@@ -1,0 +1,22 @@
+name: Continous Integration
+
+on:
+  push:
+  pull_request:
+  workflow_call:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Just
+        uses: extractions/setup-just@v2
+
+      - name: just build it
+        run: |
+          just

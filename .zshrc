@@ -1,6 +1,27 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# for just
+# using:
+#       https://github.com/casey/just?tab=readme-ov-file#shell-completion-scripts
+# Init Homebrew, which adds environment variables
+eval "$(brew shellenv)"
+
+fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
+
+# Then choose one of these options:
+# 1. If you're using Oh My Zsh, you can initialize it here
+# source $ZSH/oh-my-zsh.sh
+# done below
+
+# 2. Otherwise, run compinit yourself
+# autoload -U compinit
+# compinit
+
+# just may need to be set to bash for things like GHActions, override locally
+# if you have issues with output using
+alias just="just --shell \"zsh\""
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
