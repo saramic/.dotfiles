@@ -1,5 +1,5 @@
 ruby 3.2.2
-redis 7.0.11
+redis 7.2.4
 postgres 14.5
 nodejs 20.2.0
 yarn 1.22.19
@@ -7,3 +7,4 @@ python 3.10.4
 rust 1.73.0
 java openjdk-21
 maven 3.9.5
+zig 0.12.0
