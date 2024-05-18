@@ -1,11 +1,54 @@
 # mange dependencies with brew https://brew.sh/
 
-brew "git"                  # Distributed revision control system
-                            # https://git-scm.com
+#
+# Runtimes
+#
 brew "asdf"                 # Extendable version manager with support for
                             # Ruby, Node.js, Erlang & more
                             # https://asdf-vm.com/
+# RUST related
+tap 'filosottile/musl-cross'
+brew 'filoSottile/musl-cross/musl-cross'
+# Linux cross compilers based on musl libc
+# https://github.com/richfelker/musl-cross-make
 
+#
+# Deployment tools
+#
+brew 'awscli'               # Official Amazon AWS command-line interface
+                            # https://aws.amazon.com/cli/
+brew 'aws-cdk'              # AWS Cloud Development Kit - framework for
+                            # defining AWS infra as code
+                            # https://github.com/aws/aws-cdk
+brew 'aws-sam-cli'          # CLI tool to build, test, debug, and deploy
+                            # Serverless applications using AWS SAM
+                            # https://aws.amazon.com/serverless/sam/
+# could switch to asdf for terraform
+# NOTE: this will not work under make as the install script usese $(whoami) and
+#       the scope under make is different
+tap 'hashicorp/tap'
+brew 'hashicorp/tap/terraform' # Terraform https://www.terraform.io/
+tap "heroku/brew"
+brew "heroku"               # deploy and manage heroku platform
+brew "kubectl"              # Kubernetes command-line interface
+                            # https://kubernetes.io/
+
+#
+# Virtualization
+#
+brew 'colima'               # Container runtimes on MacOS (and Linux) with
+                            # minimal setup
+                            # https://github.com/abiosoft/colima/blob/main/README.md
+brew 'docker'               # Pack, ship and run any application as a
+                            # lightweight container https://www.docker.com/
+brew 'docker-compose'       # Isolated development environments using Docker
+                            # https://docs.docker.com/compose/
+brew 'localstack'           # Fully functional local AWS cloud stack
+                            # https://localstack.cloud/
+
+#
+# Editors
+#
 # emacs
 brew "ripgrep"              # Search tool like grep and The Silver Searcher
                             # https://github.com/BurntSushi/ripgrep
@@ -19,38 +62,53 @@ brew "tldr"                 # Simplified and community-driven man pages
                             # https://tldr.sh/
 brew "ispell"               # International Ispell
                             # https://www.cs.hmc.edu/~geoff/ispell.html
-
 # SpaceMacs
 # cask "emacs"
 # tap "homebrew/cask-fonts"
 # cask "font-source-code-pro"
-
 # neovim
 brew "nvim"                 # Ambitious Vim-fork focused on
                             # extensibility and agility
                             # https://neovim.io/
+#
+# IDE's Integrated Developer Environments
+cask "arduino-ide"          # arduino-ide: 2.2.1
+                            # https://www.arduino.cc/en/software
+cask "visual-studio-code"   # preferred code editor
 
+#
+# Utilities
+#
+brew "just"                 # Handy way to save and run
+                            # project-specific commands
+                            # https://github.com/casey/just
+brew "git"                  # Distributed revision control system
+                            # https://git-scm.com
 brew "ag"                   # sliver searcher, a faster grep
 brew "jq"                   # UNIX tool for parsing and querying JSON
 brew "wget"                 # UNIX tool for fetching things from the nets
 brew "tmux"                 # terminal multiplexer for automating running many
                             # processes across many windows
-
+brew 'base64'               # Encode and decode base64 files
+                            # https://www.fourmilab.ch/webtools/base64/
+brew 'ossp-uuid'            # ISO-C API and CLI for generating UUIDs
+                            # http://www.ossp.org/pkg/lib/uuid/
+                            # using: uuidgen
+brew 'watch'                # Executes a program periodically,
+                            # showing output fullscreen
+                            # https://gitlab.com/procps-ng/procps
 brew "libpq"                # needed for pg gem install pg -v '1.2.3' postgres
-# brew "postgresql@14"        # Object-relational database system
-#                             # https://www.postgresql.org/
+brew "postgresql@14"        # Object-relational database system
+                            # https://www.postgresql.org/
 brew "postgresql@15"        # Object-relational database system
                             # https://www.postgresql.org/
 brew "postgis"              # Adds support for geographic objects to PostgreSQL
                             # https://postgis.net/
                             # postgis: stable 3.3.4 (bottled), HEAD
-tap "heroku/brew"
-brew "heroku"               # deploy and manage heroku platform
 
 brew "exercism"             # code learning platform
 brew "ffmpeg"               # video processing like making animated gifs
 brew "mpg123"               # mp3 player
-cask "visual-studio-code"   # preferred code editor
 brew "imagemagick"          # programatic image manipulation
 cask "spectacle"            # screen realestate management
 brew "hugo"                 # blogging software
@@ -66,10 +124,8 @@ brew "gnupg"                # GNU Pretty Good Privacy (PGP) package
 cask "iterm2"               # https://www.iterm2.com/
 cask "spotify"              # https://www.spotify.com/
 cask "whatsapp"             # https://www.whatsapp.com/
-cask "gimp"
+cask "gimp"                 # https://www.gimp.org/
 
-brew "kubectl"              # Kubernetes command-line interface
-                            # https://kubernetes.io/
 tap "derailed/k9s"
 brew "derailed/k9s/k9s"     # Kubernetes CLI To Manage Your Clusters In Style!
                             # https://k9scli.io/
@@ -79,8 +135,6 @@ cask "vlc"                  # https://www.videolan.org/vlc/
 
 cask "orbstack"             # https://orbstack.dev/ Replacement for Docker
                             # Desktop
-cask "arduino-ide"          # arduino-ide: 2.2.1
-                            # https://www.arduino.cc/en/software
 cask "brave-browser"        # brave-browser: 1.60.118.0 (auto_updates)
                             # https://brave.com/
 cask "the-unarchiver"       # the-unarchiver: 4.3.6,143,1697809946
