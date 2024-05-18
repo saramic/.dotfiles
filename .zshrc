@@ -158,6 +158,8 @@ source "$HOME/.asdf/installs/rust/1.71.1/env"
 export PATH="$PATH:/Applications/RubyMine.app/Contents/MacOS"
 alias mine="/Applications/RubyMine.app/Contents/MacOS/rubymine"
 
+export LESS=-FXR
+
 # Load Angular CLI autocompletion.
 if ! command -v ng &> /dev/null
 then
@@ -165,3 +167,6 @@ then
 fi
 
 export PATH=$PATH:/Users/$USER/Library/Android/sdk/platform-tools/
+
+# set DOCKER_HOST for the things that need it
+export DOCKER_HOST=unix:///Users/${USER}/.colima/docker.sock
