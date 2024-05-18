@@ -2,6 +2,12 @@
 
 set -e
 
+# via DHH
+#   - https://x.com/dhh/status/1785016820740788495
+#   - https://gist.github.com/dhh/c5051aae633ff91bc4ce30528e4f0b60
+RED=31; GREEN=32; YELLOW=33; BLUE=34; MAGENTA=35; BOLD=1
+announce() { echo -e "\033[0;${2}m${1}\033[0m"; }
+
 install_and_update_asdf_plugin() {
   echo "installing $1 asdf plugin"
   asdf plugin-add "$1" || echo "asdf $1 plugin is already installed"
@@ -33,3 +39,7 @@ do
 done
 asdf install
 
+# intall other command line tools like angular
+command -v ng &> /dev/null || \
+  npm install --global @angular/cli && \
+  announce "✅ angular installed" $BLUE

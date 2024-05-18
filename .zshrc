@@ -157,3 +157,9 @@ source "$HOME/.asdf/installs/rust/1.71.1/env"
 # rubymine
 export PATH="$PATH:/Applications/RubyMine.app/Contents/MacOS"
 alias mine="/Applications/RubyMine.app/Contents/MacOS/rubymine"
+
+# Load Angular CLI autocompletion.
+if ! command -v ng &> /dev/null
+then
+  source <(ng completion script)
+fi
