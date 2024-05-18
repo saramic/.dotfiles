@@ -152,7 +152,10 @@ export PATH="$HOME/.config/emacs/bin:$PATH"
 alias emacs="emacsclient -c -a 'emacs'"
 
 # rust
-source "$HOME/.asdf/installs/rust/1.71.1/env"
+if [ -f "$HOME/.asdf/installs/rust/1.73.0/env" ];
+then
+  source "$HOME/.asdf/installs/rust/1.73.0/env"
+fi
 
 # rubymine
 export PATH="$PATH:/Applications/RubyMine.app/Contents/MacOS"
