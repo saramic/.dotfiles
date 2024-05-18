@@ -163,3 +163,5 @@ if ! command -v ng &> /dev/null
 then
   source <(ng completion script)
 fi
+
+export PATH=$PATH:/Users/$USER/Library/Android/sdk/platform-tools/

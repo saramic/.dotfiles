@@ -72,6 +72,7 @@ brew "nvim"                 # Ambitious Vim-fork focused on
                             # https://neovim.io/
 #
 # IDE's Integrated Developer Environments
+cask "android-studio"       # https://developer.android.com/studio/
 cask "arduino-ide"          # arduino-ide: 2.2.1
                             # https://www.arduino.cc/en/software
 cask "visual-studio-code"   # preferred code editor
