@@ -161,6 +161,8 @@
            in a new window**
         1. Add script to support iterm command click
            bin/iterm_command_click
+        1. click on iTerm2 -> Install Shell Integrations for things like
+           `imgcat`
     1. **Zoom** and **Chrome** and **Tuple**
         1. will need accessibility settings configured for screen sharing etc
     1. **Slack**

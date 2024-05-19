@@ -173,3 +173,6 @@ export PATH=$PATH:/Users/$USER/Library/Android/sdk/platform-tools/
 
 # set DOCKER_HOST for the things that need it
 export DOCKER_HOST=unix:///Users/${USER}/.colima/docker.sock
+
+# iterm2 setup
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
