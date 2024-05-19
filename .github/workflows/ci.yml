@@ -19,4 +19,4 @@ jobs:
 
       - name: just build it
         run: |
-          just
+          just --shell "bash"
