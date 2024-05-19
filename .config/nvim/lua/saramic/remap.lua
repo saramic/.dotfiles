@@ -1,4 +1,8 @@
+-- :so - to re-read nvim lua files
+
+-- use space as the leader
 vim.g.mapleader = " "
+-- " " pv - to execute Ex the file Explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
