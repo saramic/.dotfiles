@@ -11,5 +11,8 @@
         "suppressIntegrationRequestTimedOutWarning": true
     },
     "window.zoomLevel": 1,
-    "extensions.ignoreRecommendations": true
+    "extensions.ignoreRecommendations": true,
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "github.copilot.editor.enableAutoCompletions": true
 }
