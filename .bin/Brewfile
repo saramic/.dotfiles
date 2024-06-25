@@ -72,10 +72,22 @@ brew "nvim"                 # Ambitious Vim-fork focused on
                             # https://neovim.io/
 #
 # IDE's Integrated Developer Environments
+#
 cask "android-studio"       # https://developer.android.com/studio/
 cask "arduino-ide"          # arduino-ide: 2.2.1
                             # https://www.arduino.cc/en/software
 cask "visual-studio-code"   # preferred code editor
+
+#
+# Services
+#
+brew "ollama"               # Create, run, and share large language models
+                            # (LLMs) https://ollama.com/
+
+#
+# Tools
+#
+cask "burp-suite"           # https://portswigger.net/burp/
 
 #
 # Utilities
@@ -114,6 +126,8 @@ brew "imagemagick"          # programatic image manipulation
 cask "spectacle"            # screen realestate management
 brew "hugo"                 # blogging software
 cask "keycastr"             # show characters being typed
+# cask "keycast"              # https://formulae.brew.sh/cask/keycast
+#                             # https://github.com/cho45/KeyCast
 cask "keybase"              # secure messaging
 cask "pritunl"              # OpenVPN client
 
