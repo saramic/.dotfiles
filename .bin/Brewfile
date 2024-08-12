@@ -88,6 +88,28 @@ brew "ollama"               # Create, run, and share large language models
 # Tools
 #
 cask "burp-suite"           # https://portswigger.net/burp/
+brew "httpie"               # User-friendly cURL replacement (command-line HTTP
+                            # client) https://httpie.io/
+brew "audacity"             # https://www.audacityteam.org/
+# tap "proxmark/proxmark3"
+# cask "proxmark/proxmark3/arm-none-eabi-gcc" # GCC for embedded ARM processors
+# tap "RfidResearchGroup/proxmark3"
+# cask "rfidresearchgroup/proxmark3/proxmark3"    # RRG/Iceman Proxmark3 client,
+                            # CDC flasher and firmware bundle
+                            # http://www.proxmark.org/
+                            # run pm3
+
+#
+# Communications
+#
+cask "keybase"              # secure messaging
+cask "discord"              # https://discord.com/
+cask "coscreen"             # https://www.coscreen.co/
+
+#
+# Media Tools
+#
+cask "obs"
 
 #
 # Utilities
@@ -100,6 +122,7 @@ brew "git"                  # Distributed revision control system
 brew "ag"                   # sliver searcher, a faster grep
 brew "jq"                   # UNIX tool for parsing and querying JSON
 brew "wget"                 # UNIX tool for fetching things from the nets
+brew "gh"                   # GitHub command-line tool https://cli.github.com/
 brew "tmux"                 # terminal multiplexer for automating running many
                             # processes across many windows
 brew 'base64'               # Encode and decode base64 files
@@ -128,7 +151,6 @@ brew "hugo"                 # blogging software
 cask "keycastr"             # show characters being typed
 # cask "keycast"              # https://formulae.brew.sh/cask/keycast
 #                             # https://github.com/cho45/KeyCast
-cask "keybase"              # secure messaging
 cask "pritunl"              # OpenVPN client
 
 cask "tuple"                # https://tuple.app/
