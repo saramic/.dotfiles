@@ -11,5 +11,7 @@
 	excludesfile = ~/.gitignore_global
 [init]
 	defaultBranch = main
+[git-mob-config]
+	github-fetch = true
 [commit]
-	template = /Users/michael.milewski/.gitmessage.txt
+	template = /Users/michael.milewski/.gitmessage
