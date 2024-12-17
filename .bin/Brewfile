@@ -45,6 +45,7 @@ brew 'docker-compose'       # Isolated development environments using Docker
                             # https://docs.docker.com/compose/
 brew 'localstack'           # Fully functional local AWS cloud stack
                             # https://localstack.cloud/
+cask 'vmware-fusion'        # https://www.vmware.com/products/fusion.html
 
 #
 # Editors
@@ -176,3 +177,5 @@ cask "brave-browser"        # brave-browser: 1.60.118.0 (auto_updates)
                             # https://brave.com/
 cask "the-unarchiver"       # the-unarchiver: 4.3.6,143,1697809946
                             # (auto_updates) https://theunarchiver.com/
+cask "sc-im"                # Spreadsheet program for the terminal, using
+                            # ncurses https://github.com/andmarti1424/sc-im
