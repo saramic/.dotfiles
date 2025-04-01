@@ -77,7 +77,21 @@ brew "nvim"                 # Ambitious Vim-fork focused on
 cask "android-studio"       # https://developer.android.com/studio/
 cask "arduino-ide"          # arduino-ide: 2.2.1
                             # https://www.arduino.cc/en/software
+
 cask "visual-studio-code"   # preferred code editor
+                            # Microsoft Visual Studio Code VS Code Open-source
+                            # code editor Visual Studio Code.app (App)
+                            # /Applications/Visual Studio Code.app/Contents/Resources/app/bin/code (Binary)
+
+cask "windsurf"             # https://www.codeium.com/windsurf Windsurf Agentic
+                            # IDE powered by AI Flow paradigm
+                            # Windsurf.app (App)
+                            # /Applications/Windsurf.app/Contents/Resources/app/bin/windsurf (Binary)
+
+cask "cursor"               # https://www.cursor.com/ Cursor Write, edit, and
+                            # chat about your code with AI
+                            # Cursor.app (App)
+                            # /Applications/Cursor.app/Contents/Resources/app/bin/code -> cursor (Binary)
 
 #
 # Services
