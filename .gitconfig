@@ -13,5 +13,5 @@
 	defaultBranch = main
 [git-mob-config]
 	github-fetch = true
-[commit]
-	template = /Users/michael.milewski/.gitmessage
+# [commit]
+# 	template = /Users/michael.milewski/.gitmessage
