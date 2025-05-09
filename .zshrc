@@ -143,9 +143,9 @@ set -o vi
 export EDITOR=vi
 
 # asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# . /opt/homebrew/opt/asdf/libexec/asdf.sh
 # java via asdf
-. ~/.asdf/plugins/java/set-java-home.zsh
+# . ~/.asdf/plugins/java/set-java-home.zsh
 
 # emacs
 export PATH="$HOME/.config/emacs/bin:$PATH"
@@ -164,10 +164,10 @@ alias mine="/Applications/RubyMine.app/Contents/MacOS/rubymine"
 export LESS=-FXR
 
 # Load Angular CLI autocompletion.
-if ! command -v ng &> /dev/null
-then
-  source <(ng completion script)
-fi
+# if command -v ng &> /dev/null
+# then
+#   source <(ng completion script)
+# fi
 
 export PATH=$PATH:/Users/$USER/Library/Android/sdk/platform-tools/
 
@@ -176,3 +176,6 @@ export DOCKER_HOST=unix:///Users/${USER}/.colima/docker.sock
 
 # iterm2 setup
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# mise
+eval "$(/opt/homebrew/bin/mise activate zsh)"

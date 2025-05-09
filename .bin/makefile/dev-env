@@ -33,11 +33,12 @@ fi
 # source ~/.asdf/asdf.sh
 # asdf update
 
-for plugin in nodejs postgres python ruby rust yarn redis
-do
-  install_and_update_asdf_plugin $plugin
-done
-asdf install
+# for plugin in nodejs postgres python ruby rust yarn redis
+# do
+#   install_and_update_asdf_plugin $plugin
+# done
+# asdf install
+mise install
 
 # intall other command line tools like angular
 command -v ng &> /dev/null || \

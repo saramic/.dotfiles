@@ -3,9 +3,12 @@
 #
 # Runtimes
 #
-brew "asdf"                 # Extendable version manager with support for
-                            # Ruby, Node.js, Erlang & more
-                            # https://asdf-vm.com/
+# brew "asdf"                 # Extendable version manager with support for
+#                             # Ruby, Node.js, Erlang & more
+#                             # https://asdf-vm.com/
+brew "mise"                   # Polyglot runtime manager (asdf rust clone)
+                              # https://mise.jdx.dev/
+
 # RUST related
 tap 'filosottile/musl-cross'
 brew 'filoSottile/musl-cross/musl-cross'
@@ -105,7 +108,7 @@ brew "ollama"               # Create, run, and share large language models
 cask "burp-suite"           # https://portswigger.net/burp/
 brew "httpie"               # User-friendly cURL replacement (command-line HTTP
                             # client) https://httpie.io/
-brew "audacity"             # https://www.audacityteam.org/
+# brew "audacity"             # https://www.audacityteam.org/
 # tap "proxmark/proxmark3"
 # cask "proxmark/proxmark3/arm-none-eabi-gcc" # GCC for embedded ARM processors
 # tap "RfidResearchGroup/proxmark3"
@@ -120,6 +123,7 @@ brew "audacity"             # https://www.audacityteam.org/
 cask "keybase"              # secure messaging
 cask "discord"              # https://discord.com/
 cask "coscreen"             # https://www.coscreen.co/
+cask "slack"
 
 #
 # Media Tools
@@ -161,7 +165,7 @@ brew "exercism"             # code learning platform
 brew "ffmpeg"               # video processing like making animated gifs
 brew "mpg123"               # mp3 player
 brew "imagemagick"          # programatic image manipulation
-cask "spectacle"            # screen realestate management
+# cask "spectacle"            # screen realestate management
 brew "hugo"                 # blogging software
 cask "keycastr"             # show characters being typed
 # cask "keycast"              # https://formulae.brew.sh/cask/keycast
@@ -187,9 +191,10 @@ cask "vlc"                  # https://www.videolan.org/vlc/
 
 # cask "orbstack"             # https://orbstack.dev/ Replacement for Docker
 #                             # Desktop
+# brew "google-chrome"        # Google-chrome https://www.google.com/chrome/
 cask "brave-browser"        # brave-browser: 1.60.118.0 (auto_updates)
                             # https://brave.com/
 cask "the-unarchiver"       # the-unarchiver: 4.3.6,143,1697809946
                             # (auto_updates) https://theunarchiver.com/
-cask "sc-im"                # Spreadsheet program for the terminal, using
-                            # ncurses https://github.com/andmarti1424/sc-im
+# cask "sc-im"                # Spreadsheet program for the terminal, using
+#                             # ncurses https://github.com/andmarti1424/sc-im
