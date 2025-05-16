@@ -1,5 +1,13 @@
 # .dotfiles
 
+## TL;DR
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/saramic/.dotfiles/refs/heads/main/.bin/bootstrap.sh)"
+```
+
+---
+
 stored in a `bare` git repository (
   [link](https://www.atlassian.com/git/tutorials/dotfiles)
 )

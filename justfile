@@ -33,6 +33,10 @@ _default:
     just _announce "🔵 hi in blue" "{{BLUE}}"
     just _announce "🟣 hi in magenta" "{{MAGENTA}}"
 
+# bootstrap the .dotfiles can run with: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/saramic/.dotfiles/refs/heads/main/.bin/bootstrap.sh)"
+bootstrap:
+    .bin/bootstrap.sh
+
 # check required tools
 check-tools:
     .bin/makefile/check-tools
