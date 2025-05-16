@@ -241,7 +241,7 @@ DEFAULT_GIT_REMOTE="https://github.com/saramic/.dotfiles"
 # alias config='/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # echo ".dotfiles" >> .gitignore
 # git clone --bare <git-repo-url> $HOME/.dotfiles
-execute "${USABLE_GIT}" "clone" "--bare" DEFAULT_GIT_REMOTE "${HOME}/.dotfiles"
+execute "${USABLE_GIT}" "clone" "--bare" "${DEFAULT_GIT_REMOTE}" "${HOME}/.dotfiles"
 # config checkout
 
 # # probably want to
