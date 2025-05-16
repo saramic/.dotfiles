@@ -252,7 +252,7 @@ execute "${USABLE_GIT}" "--git-dir=${HOME}/.dotfiles/" "--work-tree=${HOME}" "ch
 # config config --local status.showUntrackedFiles no
 
 # Setup homebrew
-execute '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+execute "-c" '"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
 
 cat <<EOS
 
