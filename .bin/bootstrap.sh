@@ -241,12 +241,16 @@ DEFAULT_GIT_REMOTE="https://github.com/saramic/.dotfiles"
 # alias config='/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # echo ".dotfiles" >> .gitignore
 # git clone --bare <git-repo-url> $HOME/.dotfiles
+# NOTE: this will not work if ~/.dotfiles already exists
 execute "${USABLE_GIT}" "clone" "--bare" "${DEFAULT_GIT_REMOTE}" "${HOME}/.dotfiles"
 # config checkout
 execute "${USABLE_GIT}" "--git-dir=${HOME}/.dotfiles/" "--work-tree=${HOME}" "checkout"
 
 # # probably want to
 # config config --local status.showUntrackedFiles no
+
+# Setup homebrew
+exectue '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
 
 cat <<EOS
 
