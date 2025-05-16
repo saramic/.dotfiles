@@ -244,13 +244,15 @@ DEFAULT_GIT_REMOTE="https://github.com/saramic/.dotfiles"
 # NOTE: this will not work if ~/.dotfiles already exists
 execute "${USABLE_GIT}" "clone" "--bare" "${DEFAULT_GIT_REMOTE}" "${HOME}/.dotfiles"
 # config checkout
+# NOTE: this will not work if files are in the way - user has to manually
+#       delete them at the moment
 execute "${USABLE_GIT}" "--git-dir=${HOME}/.dotfiles/" "--work-tree=${HOME}" "checkout"
 
 # # probably want to
 # config config --local status.showUntrackedFiles no
 
 # Setup homebrew
-exectue '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+execute '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
 
 cat <<EOS
 
