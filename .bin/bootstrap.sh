@@ -29,6 +29,7 @@ fi
 tty_mkbold() { tty_escape "1;$1"; }
 tty_underline="$(tty_escape "4;39")"
 tty_blue="$(tty_mkbold 34)"
+tty_yellow="$(tty_mkbold 33)"
 tty_green="$(tty_mkbold 32)"
 tty_red="$(tty_mkbold 31)"
 tty_bold="$(tty_mkbold 39)"
@@ -184,9 +185,9 @@ EOS
 
 if [[ -n "${BOOTSTRAP_ON_MACOS-}" ]]
 then
-  ohai "Detected MacOs - continuing ✅"
+  ohai "✅ Detected MacOs - continuing"
 else
-  abort "Linux not supported yet - aborting ❌"
+  abort "❌ Linux not supported yet - aborting"
 fi
 
 # shellcheck disable=SC2016
@@ -236,24 +237,33 @@ fi
 
 USABLE_GIT=/usr/bin/git
 
-# Setup bear repo
-DEFAULT_GIT_REMOTE="https://github.com/saramic/.dotfiles"
-# alias config='/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-# echo ".dotfiles" >> .gitignore
-# git clone --bare <git-repo-url> $HOME/.dotfiles
-# NOTE: this will not work if ~/.dotfiles already exists
-execute "${USABLE_GIT}" "clone" "--bare" "${DEFAULT_GIT_REMOTE}" "${HOME}/.dotfiles"
-# config checkout
-# NOTE: this will not work if files are in the way - user has to manually
-#       delete them at the moment
-execute "${USABLE_GIT}" "--git-dir=${HOME}/.dotfiles/" "--work-tree=${HOME}" "checkout"
 
-# # probably want to
-# config config --local status.showUntrackedFiles no
+# Setup bear repo
+if [ ! -d "${HOME}/.dotfiles" ]
+then
+  ohai "Setting up .dotfiles repo as --bear"
+  DEFAULT_GIT_REMOTE="https://github.com/saramic/.dotfiles"
+  # alias config='/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+  # echo ".dotfiles" >> .gitignore
+  # git clone --bare <git-repo-url> $HOME/.dotfiles
+  # NOTE: this will not work if ~/.dotfiles already exists
+  execute "${USABLE_GIT}" "clone" "--bare" "${DEFAULT_GIT_REMOTE}" "${HOME}/.dotfiles"
+  # config checkout
+  # NOTE: this will not work if files are in the way - user has to manually
+  #       delete them at the moment
+  execute "${USABLE_GIT}" "--git-dir=${HOME}/.dotfiles/" "--work-tree=${HOME}" "checkout"
+
+  # # probably want to
+  # config config --local status.showUntrackedFiles no
+else
+  ohai "✅ .dotfiles is already setup"
+fi
 
 # Setup homebrew
-execute "-c" '"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+ohai "Setup homebrew with ..."
 
+echo -e "\n\t${tty_yellow}bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"${tty_reset}"
+# execute "bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
 cat <<EOS
 
 ${tty_bold}Success 🎉${tty_reset}

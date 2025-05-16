@@ -4,6 +4,13 @@
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/saramic/.dotfiles/refs/heads/main/.bin/bootstrap.sh)"
+
+make
+just dev-env
+
+#
+config config --local status.showUntrackedFiles no
+config status
 ```
 
 ---
