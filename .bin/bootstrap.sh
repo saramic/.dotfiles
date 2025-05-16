@@ -234,6 +234,19 @@ EOABORT
   )"
 fi
 
+USABLE_GIT=/usr/bin/git
+
+# Setup bear repo
+DEFAULT_GIT_REMOTE="https://github.com/saramic/.dotfiles"
+# alias config='/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+# echo ".dotfiles" >> .gitignore
+# git clone --bare <git-repo-url> $HOME/.dotfiles
+execute "${USABLE_GIT}" "clone" "--bare" DEFAULT_GIT_REMOTE "${HOME}/.dotfiles"
+# config checkout
+
+# # probably want to
+# config config --local status.showUntrackedFiles no
+
 cat <<EOS
 
 ${tty_bold}Success 🎉${tty_reset}
