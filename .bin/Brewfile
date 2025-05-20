@@ -16,6 +16,11 @@ brew 'filoSottile/musl-cross/musl-cross'
 # https://github.com/richfelker/musl-cross-make
 
 #
+# Game Engines
+#
+cask "godot"                # https://godotengine.org/
+
+#
 # Deployment tools
 #
 brew 'awscli'               # Official Amazon AWS command-line interface
@@ -166,6 +171,8 @@ brew "ffmpeg"               # video processing like making animated gifs
 brew "mpg123"               # mp3 player
 brew "imagemagick"          # programatic image manipulation
 # cask "spectacle"            # screen realestate management
+cask "rectangle"            # https://rectangleapp.com/
+
 brew "hugo"                 # blogging software
 cask "keycastr"             # show characters being typed
 # cask "keycast"              # https://formulae.brew.sh/cask/keycast
