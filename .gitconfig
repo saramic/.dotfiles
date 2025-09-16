@@ -5,7 +5,7 @@
 [pull]
 	rebase = true
 [core]
-	editor = vi
+	editor = code -w
 	# editor = code --wait
 	pager = less -F -X
 	excludesfile = ~/.gitignore_global
@@ -15,3 +15,5 @@
 	github-fetch = true
 # [commit]
 # 	template = /Users/michael.milewski/.gitmessage
+[commit]
+	verbose = true
